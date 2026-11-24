@@ -1,0 +1,14 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Call data: contains advertisers' personal data
+/data/
+recordings/
+transcripts/
+*.mp3
+*.wav
+
+# OS
+.DS_Store

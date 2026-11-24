@@ -24,7 +24,7 @@ Zmiana decyzji: popraw wpis i dopisz, co było wcześniej i dlaczego się zmieni
 
 - Rozmowy po polsku. (Q8)
 - Najpierw dzwonimy do rodziny, docelowo do prawdziwych ogłoszeniodawców. (Q4)
-- Prawdziwe telefony są możliwe już teraz, z realnym zamiarem zakupu. (Q12)
+- Prawdziwi ogłoszeniodawcy dopiero w Pilocie, z realnym zamiarem zakupu. Wcześniej (Q12): możliwe już teraz; zmienione przy pisaniu specyfikacji. (Q35)
 - Każdy telefon zatwierdza człowiek. (Q5)
 - Agent na początku mówi, że jest AI, w czyim imieniu i po co dzwoni. Nie udaje człowieka, nie negocjuje, nie składa ofert, nie umawia wiążąco. Na „proszę nie dzwonić” kończy i zapisuje numer na liście blokad. Prawdziwe nazwisko przy prawdziwych telefonach, fikcyjne w demo. (Q6)
 - Po rozmowie zostają fakty (`odpowiedź` / `nie wie` / `odmówił`) z cytatem. Bez audio; transkrypcja usuwana po 30 dniach. (Q18)
@@ -33,7 +33,8 @@ Zmiana decyzji: popraw wpis i dopisz, co było wcześniej i dlaczego się zmieni
 ## Ewaluacja
 
 - Oceniamy oba etapy: wybór ogłoszeń i rozmowę. (Q7)
-- Wybór: ok. 40 ogłoszeń oznaczonych przed zobaczeniem oceny Claude'a, 20 do strojenia i 20 odłożonych. Oznaczenie to zapis „zadzwoniłbym / nie / nie wiem”. Poprawność faktów, odsetek dobrych ofert, które przeszły (cel ≥ 90%), trafność `call`. W repo tylko wyniki zbiorcze i zestaw syntetyczny. (Q16)
+- Wybór: ok. 40 ogłoszeń oznaczonych przed zobaczeniem oceny Claude'a, 20 do strojenia i 20 odłożonych. Obok procentów podajemy liczby, bo próba jest mała. Oznaczenie to zapis „zadzwoniłbym / nie / nie wiem”. Poprawność faktów, odsetek dobrych ofert, które przeszły (cel ≥ 90%), trafność `call`. W repo tylko wyniki zbiorcze i zestaw syntetyczny. (Q16)
+- Scenariusze obejmują: niechętny rozmówca, poczta głosowa, agencja, sprzeczne odpowiedzi. (Q7)
 - Rozmowa: 12 symulowanych scenariuszy po 3 razy i min. 5 rozmów z rodziną, która gra z ukrytej karty faktów. Ujawnienie AI i sprzeciw 100%, zakazane obietnice 0, zgodność faktów ≥ 90%. Zgoda wcześniej, transkrypcji nie publikujemy. (Q17)
 - Publiczne demo tylko z symulacjami i osobami, które zgodziły się na publikację. (Q4)
 
@@ -48,6 +49,8 @@ Zmiana decyzji: popraw wpis i dopisz, co było wcześniej i dlaczego się zmieni
 - Backend FastAPI; UI od razu w docelowym stacku: Next.js, TypeScript, Tailwind, ElevenLabs UI. (Q28, Q36)
 - Mini dashboard, na początek cztery ekrany: Brief, ogłoszenia, zatwierdzenie telefonu, wynik rozmowy. (Q28)
 - MVP: SQLite, bez frameworka do agentów, odpytywanie API po rozmowie zamiast webhooka. Hosting (AWS lub inny) później. (Q22)
+- Model w rozmowie wybiorą wyniki ewaluacji. (Q22)
+- Automatyczne testy na razie przez API backendu; Claude, ElevenLabs i źródło ogłoszeń podstawione. Później coś na kształt [software factory](https://simonwillison.net/2026/Feb/7/software-factory/) albo Meticulous AI. (przy pisaniu specyfikacji)
 
 ## Etapy (Q35)
 
@@ -60,9 +63,11 @@ Zmiana decyzji: popraw wpis i dopisz, co było wcześniej i dlaczego się zmieni
 
 Praca iteracyjna, małymi częściami. Właściciel projektu decyduje, które zadanie i kiedy.
 
-- [ ] **Listing** (Q24): skąd brać rzeczywiste ogłoszenia. Zaczynamy od pomysłów właściciela; prototypy do wypróbowania.
-- [ ] **Score** (Q25): jak podzielić ocenę między Claude'a i kod.
-- [ ] **Numer telefonu** (Q31): jak zdobyć i skonfigurować.
+- [ ] [**01 Listing**](../.scratch/home-search-mvp/issues/01-listing.md) (Q24): skąd brać rzeczywiste ogłoszenia. Zaczynamy od pomysłów właściciela; prototypy do wypróbowania.
+- [ ] [**02 Score**](../.scratch/home-search-mvp/issues/02-score.md) (Q25): jak podzielić ocenę między Claude'a i kod.
+- [ ] [**03 Numer telefonu**](../.scratch/home-search-mvp/issues/03-phone-number.md) (Q31): jak zdobyć i skonfigurować.
+- [ ] [**04 Przebieg rozmowy**](../.scratch/home-search-mvp/issues/04-conversation.md): o co agent pyta i jak rozmawia.
+- [ ] [**05 Sekrety i awarie**](../.scratch/home-search-mvp/issues/05-secrets-and-failures.md): jak chronimy dostępy i co robimy, gdy coś zawiedzie.
 
 ## Odrzucone
 

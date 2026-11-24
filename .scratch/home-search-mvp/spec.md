@@ -139,7 +139,7 @@ W MVP agent dzwoni do rodziny, która gra z ukrytej karty faktów. Oba etapy, wy
 
 ## Out of Scope
 
-- **Pilot:** hosting, testy innych użytkowników, prawdziwi Advertiserzy. (Q35)
+- **Pilot:** hosting, testy innych użytkowników, prawdziwi Advertiserzy (potwierdzone przez właściciela). (Q35)
 - **Produkcja:** codzienne użycie, monitoring. (Q35)
 - Osobny Brief drugiego użytkownika. (Q32)
 - Najem. (wynika z Q2)
@@ -160,7 +160,6 @@ Właściciel projektu decyduje, które zadanie i kiedy. Specyfikacja może przej
 | [Przebieg rozmowy](issues/04-conversation.md) | O co agent pyta i jak prowadzi rozmowę? | Historie 21-30, 33-38 i 46-51 |
 | [Sekrety i awarie](issues/05-secrets-and-failures.md) | Jak chronimy dostępy i co robimy, gdy coś zawiedzie? | Całe MVP |
 
-### Niejasności do potwierdzenia
+### Niejasność do rozstrzygnięcia
 
-1. **Prawdziwi Advertiserzy:** Q12 mówi, że można dzwonić już teraz, a etapy z Q35 umieszczają ich w Pilocie. Szkic przyjmuje późniejszą decyzję, czyli Pilot.
-2. **Sekrety i awarie:** etapy z Q35 umieszczają je w Produkcji, a tutaj są otwartą kwestią MVP. Podział rozstrzygnie zadanie.
+**Sekrety i awarie:** etapy z Q35 umieszczają je w Produkcji, a tutaj są otwartą kwestią MVP. Podział rozstrzygnie zadanie 05.
